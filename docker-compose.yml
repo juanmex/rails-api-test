@@ -10,7 +10,7 @@ services:
       context: ./
       dockerfile: Dockerfile
       args: { UID: 1000, GID: 1000 }
-    working_dir: /app
+    working_dir: /rails
     command: bash -lc "bin/rails s -b 0.0.0.0 -p 3000"
     ports:
       - "3000:3000"
