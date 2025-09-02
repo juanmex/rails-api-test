@@ -1,0 +1,19 @@
+services:
+  api:
+    environment:
+      DB_HOST: devtestdatabase.contalink.com
+      DB_USER: developer
+      DB_PASSWORD: UQpaA9TA
+      DB_NAME: testinvoices
+      DB_PORT: 5432
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args: { UID: 1000, GID: 1000 }
+    working_dir: /app
+    command: bash -lc "bin/rails s -b 0.0.0.0 -p 3000"
+    #env_file: ./.env
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/app
