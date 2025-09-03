@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Paginated
   extend ActiveSupport::Concern
 
@@ -10,12 +12,12 @@ module Paginated
   end
 
   def paginate(scope)
-     pagy, data = pagy(scope, **pagination_params)
-     meta = pagy_metadata(pagy).slice(:count, :page, :pages, :limit)
-     meta[:per_page] = meta.delete(:limit)
-     {
+    pagy, data = pagy(scope, **pagination_params)
+    meta = pagy_metadata(pagy).slice(:count, :page, :pages, :limit)
+    meta[:per_page] = meta.delete(:limit)
+    {
       data:,
       meta:
-     }
+    }
   end
 end

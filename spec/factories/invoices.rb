@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :invoice do
-    invoice_number { "INV01" }
+    invoice_number { 'INV01' }
     total { 100 }
     invoice_date { Time.zone.now }
-    status { "Vigente" }
+    status { 'Vigente' }
     active { true }
   end
 end
