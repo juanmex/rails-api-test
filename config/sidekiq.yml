@@ -1,0 +1,10 @@
+:concurrency: 5
+:queues:
+  - default
+  - mailers
+:scheduler:
+  :schedule:
+    top_morning_sales:
+      #cron: '0 * * * * *'   # Cada minuto
+      cron: "0 6 * * *"     # todos los días a las 06:00
+      class: Invoices::TopSalesJob
