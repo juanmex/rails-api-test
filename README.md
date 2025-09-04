@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Cuando instalas una nueva gema
+docker compose run --rm api bundle install
+docker compose run --rm sidekiq bundle install

@@ -1,0 +1,19 @@
+<h1>Días con más ventas en las mañanas</h1>
+<p>
+<table style="width: 100%;">
+    <thead>
+        <tr style="background: #ccc; color: #000000;">
+            <th align="left" style="padding: 10px; border: 1px solid #ddd;">Fecha</th>
+            <th align="right" style="padding: 10px; border: 1px solid #ddd;">Total de venta</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @data.each do |row| %>
+        <tr>
+            <td><%= row[:date].strftime("%d/%m/%Y") %></td>
+            <td align="right"><%= number_to_currency(row[:total_sales]) %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>    
+</p>

@@ -2,3 +2,7 @@ plugins: rubocop-rails
 
 Style/Documentation:
   Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/**/*' 

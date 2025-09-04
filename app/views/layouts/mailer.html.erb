@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <style>
-      /* Email styles need to be inline */
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contalink Mail</title>
   </head>
-
-  <body>
-    <%= yield %>
+  <body style="margin:0; padding:0; font-family:Arial, sans-serif; background:#f9f9f9; color:#333;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td align="center" style="padding: 20px 0;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+             width="600" style="width:100%; max-width:600px; min-width:320px; background:#ffffff; border-radius:8px;">
+            <tr>
+              <td style="padding:20px; font-family:Arial,sans-serif; font-size:16px;">
+                <%= yield %>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
