@@ -40,7 +40,9 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
 
+  gem 'letter_opener'
   gem 'rubocop-rails'
+  gem 'sqlite3' # only for testing
 end
 
 group :development do
@@ -50,3 +52,4 @@ end
 
 gem 'pagy'
 gem 'sidekiq'
+gem 'sidekiq-scheduler'
