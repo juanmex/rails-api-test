@@ -53,5 +53,6 @@ end
 
 gem 'pagy'
 gem 'rack-cors', require: 'rack/cors'
+gem 'redis', '>= 4.0.1'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'

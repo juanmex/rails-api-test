@@ -1,8 +1,9 @@
 # README
-Para arranncar el proyecto sigue estos pasos:
+Para arrancar el proyecto sigue estos pasos:
 
 1. Instala docker
 2. Clona el repositorio
+3. Cambia el nombre del archivo env.copy a .env
 
 ## Comandos útiles
 ```
