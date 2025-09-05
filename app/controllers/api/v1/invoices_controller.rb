@@ -11,8 +11,8 @@ module Api
       end
 
       def mail
-        Invoices::TopMorningSalesJob.perform_later
-        head :no_content
+        Invoices::TopSalesJob.perform_later
+        render json: { message: 'Job lanzado' }, status: :ok
       end
 
       def filtered_scope(scope)

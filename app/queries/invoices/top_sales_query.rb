@@ -8,7 +8,7 @@ module Invoices
         .order('SUM(total) DESC')
         .limit(limit)
         .pluck('DATE(invoice_date) as day', 'SUM(total) AS total_sales')
-        .map { |row| { date: Date.parse(row[0]), total_sales: row[1] } }
+        .map { |row| { date: Date.parse(row[0].to_s), total_sales: row[1] } }
     end
   end
 end
