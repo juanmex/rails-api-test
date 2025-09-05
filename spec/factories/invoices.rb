@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :invoice do
-    invoice_number { 'MyString' }
+    invoice_number { 'INV-000' }
     total { '9.99' }
     invoice_date { Time.zone.now }
     status { 'MyString' }
