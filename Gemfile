@@ -52,5 +52,6 @@ group :development do
 end
 
 gem 'pagy'
+gem 'rack-cors', require: 'rack/cors'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
